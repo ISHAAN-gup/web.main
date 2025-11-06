@@ -1,0 +1,217 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Panel - Delhi Local Shop</title>
+        <link rel="stylesheet" href="admin.css">
+    </head>
+    <body>
+        <!-- Login Section -->
+        <div id="login-section" class="login-container">
+            <div class="login-box">
+                <h2>Admin Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                    <div id="login-error" class="error-message"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div id="admin-dashboard" class="admin-dashboard" style="display: none;">
+            <header class="admin-header">
+                <h1>Admin Panel</h1>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </header>
+
+            <div class="admin-container">
+                <nav class="admin-nav">
+                    <ul>
+                        <li><a href="#" data-section="general" class="nav-link active">General Settings</a></li>
+                        <li><a href="#" data-section="hero" class="nav-link">Hero Section</a></li>
+                        <li><a href="#" data-section="about" class="nav-link">About Section</a></li>
+                        <li><a href="#" data-section="products" class="nav-link">Products</a></li>
+                        <li><a href="#" data-section="contact" class="nav-link">Contact Info</a></li>
+                        <li><a href="#" data-section="images" class="nav-link">Images</a></li>
+                    </ul>
+                </nav>
+
+                <main class="admin-content">
+                    <!-- General Settings -->
+                    <div id="general-section" class="content-section active">
+                        <h2>General Settings</h2>
+                        <form id="general-form">
+                            <div class="form-group">
+                                <label for="shop-name">Shop Name:</label>
+                                <input type="text" id="shop-name-input" name="shop-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="footer-text">Footer Text:</label>
+                                <textarea id="footer-text-input" name="footer-text" rows="2"></textarea>
+                            </div>
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- Hero Section -->
+                    <div id="hero-section" class="content-section">
+                        <h2>Hero Section</h2>
+                        <form id="hero-form">
+                            <div class="form-group">
+                                <label for="hero-title">Hero Title:</label>
+                                <input type="text" id="hero-title-input" name="hero-title">
+                            </div>
+                            <div class="form-group">
+                                <label for="hero-description">Hero Description:</label>
+                                <textarea id="hero-description-input" name="hero-description" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="hero-image">Hero Image URL:</label>
+                                <input type="url" id="hero-image-input" name="hero-image">
+                                <small>Enter image URL or use placeholder</small>
+                            </div>
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- About Section -->
+                    <div id="about-section" class="content-section">
+                        <h2>About Section</h2>
+                        <form id="about-form">
+                            <div class="form-group">
+                                <label for="about-title">About Title:</label>
+                                <input type="text" id="about-title-input" name="about-title">
+                            </div>
+                            <div class="form-group">
+                                <label for="about-description">About Description:</label>
+                                <textarea id="about-description-input" name="about-description" rows="4"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="feature1">Feature 1 Text:</label>
+                                <input type="text" id="feature1-input" name="feature1">
+                            </div>
+                            <div class="form-group">
+                                <label for="feature2">Feature 2 Text:</label>
+                                <input type="text" id="feature2-input" name="feature2">
+                            </div>
+                            <div class="form-group">
+                                <label for="feature3">Feature 3 Text:</label>
+                                <input type="text" id="feature3-input" name="feature3">
+                            </div>
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- Products Section -->
+                    <div id="products-section" class="content-section">
+                        <h2>Products Section</h2>
+                        <form id="products-form">
+                            <div class="form-group">
+                                <label for="products-title">Products Title:</label>
+                                <input type="text" id="products-title-input" name="products-title">
+                            </div>
+                            
+                            <h3>Product 1</h3>
+                            <div class="form-group">
+                                <label for="product1-name">Product 1 Name:</label>
+                                <input type="text" id="product1-name-input" name="product1-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="product1-desc">Product 1 Description:</label>
+                                <textarea id="product1-desc-input" name="product1-desc" rows="2"></textarea>
+                            </div>
+
+                            <h3>Product 2</h3>
+                            <div class="form-group">
+                                <label for="product2-name">Product 2 Name:</label>
+                                <input type="text" id="product2-name-input" name="product2-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="product2-desc">Product 2 Description:</label>
+                                <textarea id="product2-desc-input" name="product2-desc" rows="2"></textarea>
+                            </div>
+
+                            <h3>Product 3</h3>
+                            <div class="form-group">
+                                <label for="product3-name">Product 3 Name:</label>
+                                <input type="text" id="product3-name-input" name="product3-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="product3-desc">Product 3 Description:</label>
+                                <textarea id="product3-desc-input" name="product3-desc" rows="2"></textarea>
+                            </div>
+
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div id="contact-section" class="content-section">
+                        <h2>Contact Information</h2>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-title">Contact Title:</label>
+                                <input type="text" id="contact-title-input" name="contact-title">
+                            </div>
+                            <div class="form-group">
+                                <label for="address-text">Address:</label>
+                                <input type="text" id="address-text-input" name="address-text">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-text">Phone Number:</label>
+                                <input type="text" id="phone-text-input" name="phone-text">
+                            </div>
+                            <div class="form-group">
+                                <label for="hours-text">Store Hours:</label>
+                                <input type="text" id="hours-text-input" name="hours-text">
+                            </div>
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- Images Section -->
+                    <div id="images-section" class="content-section">
+                        <h2>Image Management</h2>
+                        <div class="image-grid">
+                            <div class="image-item">
+                                <h3>Hero Image</h3>
+                                <img id="hero-preview" src="" alt="Hero Image Preview" style="max-width: 300px;">
+                                <input type="url" id="hero-image-url" placeholder="Enter image URL">
+                                <button onclick="updateImage('hero')">Update Hero Image</button>
+                            </div>
+                            <div class="image-item">
+                                <h3>Product 1 Image</h3>
+                                <img id="product1-preview" src="" alt="Product 1 Preview" style="max-width: 200px;">
+                                <input type="url" id="product1-image-url" placeholder="Enter image URL">
+                                <button onclick="updateImage('product1')">Update Product 1 Image</button>
+                            </div>
+                            <div class="image-item">
+                                <h3>Product 2 Image</h3>
+                                <img id="product2-preview" src="" alt="Product 2 Preview" style="max-width: 200px;">
+                                <input type="url" id="product2-image-url" placeholder="Enter image URL">
+                                <button onclick="updateImage('product2')">Update Product 2 Image</button>
+                            </div>
+                            <div class="image-item">
+                                <h3>Product 3 Image</h3>
+                                <img id="product3-preview" src="" alt="Product 3 Preview" style="max-width: 200px;">
+                                <input type="url" id="product3-image-url" placeholder="Enter image URL">
+                                <button onclick="updateImage('product3')">Update Product 3 Image</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <script src="admin.js"></script>
+    </body>
+    </html>
